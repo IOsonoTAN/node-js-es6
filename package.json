@@ -1,7 +1,7 @@
 {
   "name": "Basic Node.js with ECMAScript 2015 (ES6)",
   "version": "0.0.1",
-  "description": "This's a managing tools for travel, helpful travellers and make a wonderful trip.",
+  "description": "This application for a beginner need to learn about node.js and es6.",
   "main": "server.js",
   "scripts": {
     "test": "mocha"

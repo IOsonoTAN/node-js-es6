@@ -1,6 +1,6 @@
 # Basic Node.js with ECMAScript 2015 (ES6)
 
-This's a managing tools for travel, helpful travellers and make a wonderful trip.
+This application for a beginner need to learn about node.js and es6.
 
 Libraries integrated:
 - Node.js 4.x.x
