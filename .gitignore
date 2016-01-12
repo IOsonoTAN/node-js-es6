@@ -1,0 +1,11 @@
+.DS_Store
+node_modules
+node_modules/*
+log
+upload
+tmp/*
+*.sublime*
+public/min/*
+npm-debug.log
+*.bak*
+*.rdb
