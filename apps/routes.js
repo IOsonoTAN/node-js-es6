@@ -1,0 +1,12 @@
+'use strict'
+
+const router = require('express').Router(),
+      pageController = require('./controllers/page')
+
+/**
+ * Page routes
+ */
+router.route('/').get(pageController.mainpage)
+router.route('*').get(pageController.notfound)
+
+module.exports = router
