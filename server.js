@@ -7,10 +7,13 @@ const express = require('express'),
       useragent = require('express-useragent'),
       http = require('http'),
       fs = require('fs'),
+      path = require('path'),
       colors = require('colors/safe'),
       routes = require('./apps/routes')
 
 app.disable('x-powered-by')
+app.set('views', path.join(__dirname, 'apps/views'))
+app.set('view engine', 'jade')
 app.set('trust proxy', true)
 app.set('port', process.env.PORT ? process.env.PORT : 3000)
 app.use(

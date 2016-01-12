@@ -7,6 +7,8 @@ const router = require('express').Router(),
  * Page routes
  */
 router.route('/').get(pageController.mainpage)
+router.route('/user/:id').get(pageController.test)
+
 router.route('*').get(pageController.notfound)
 
 module.exports = router
