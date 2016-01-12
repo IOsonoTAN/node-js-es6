@@ -1,5 +1,5 @@
 {
-  "name": "Basic Node.js with ECMAScript 2015 (ES6)",
+  "name": "basic-node-js",
   "version": "0.0.1",
   "description": "This application for a beginner need to learn about node.js and es6.",
   "main": "server.js",
