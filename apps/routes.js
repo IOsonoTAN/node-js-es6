@@ -4,11 +4,13 @@ const router = require('express').Router(),
       pageController = require('./controllers/page')
 
 /**
- * Page routes
+ * Routes
  */
 router.route('/').get(pageController.mainpage)
-router.route('/user/:id').get(pageController.test)
 
+/**
+ * 404 page notfound.
+ */
 router.route('*').get(pageController.notfound)
 
 module.exports = router

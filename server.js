@@ -9,6 +9,7 @@ const express = require('express'),
       fs = require('fs'),
       path = require('path'),
       colors = require('colors/safe'),
+      helpers = require('./apps/helpers'),
       routes = require('./apps/routes')
 
 app.disable('x-powered-by')
