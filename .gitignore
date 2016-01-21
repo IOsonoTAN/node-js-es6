@@ -9,3 +9,5 @@ public/min/*
 npm-debug.log
 *.bak*
 *.rdb
+docker-compose.yml
+Dockerfile
