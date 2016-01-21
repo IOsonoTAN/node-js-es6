@@ -15,13 +15,13 @@ redis.on('error', function(error) {
   } else {
     RedisStore = require('connect-redis')(express)
     app.use(express.session({
-      store: new RedisStore({
-        host: redis_url.hostname,
-        port: redis_url.port,
-        prefix: "chs-sess",
-        pass: redis_password
+      'store'   : new RedisStore({
+        'host'  : redis_url.hostname,
+        'port'  : redis_url.port,
+        'prefix': "chs-sess",
+        'pass'  : redis_password
       }),
-      secret: config.session_secret
+      'secret'  : config.session_secret
     }))
   }
 })

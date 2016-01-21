@@ -21,7 +21,7 @@ const http = require('http'),
 /**
  * app.locals: passing variables to views
  */
-app.locals = { /* JSON.stringify() */
+app.locals = {
   'config': config
 }
 

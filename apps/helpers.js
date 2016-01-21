@@ -1,5 +1,12 @@
 'use strict'
 
+ /**
+  * Javascript functions (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
+  * - JSON.stringify()
+  * - JSON.parse()
+  * - Object.assign()
+  */
+
 const helpers = {
   t: (string) => {
     let translated = `'${string}'`

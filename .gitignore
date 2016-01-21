@@ -11,3 +11,4 @@ npm-debug.log
 *.rdb
 docker-compose.yml
 Dockerfile
+test/*.test.js*
