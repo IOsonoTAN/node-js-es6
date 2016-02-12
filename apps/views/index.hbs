@@ -1,0 +1,10 @@
+<h4>Example: Logic</h4>
+<p>
+  In Handlebars you can use 'if', 'else' and 'unless' helpers.
+  The 'if' helper will display whatever is inside it (and before the '/if' helper) if the variable is "truthy". Basically,
+  is it is not <code>false</code> or <code>undefined</code> or <code>0</code>.
+</p>
+
+{{#if profile.name }}
+  <pre>{{ profile.name }} {{ profile.surname }}</pre>
+{{/if}}

@@ -10,8 +10,8 @@ Libraries integrated:
 ### Installation
 
 ```sh
-$ git clone [git-repo-url] nodejs
-$ cd nodejs
+$ git clone https://github.com/IOsonoTAN/node-js-es6
+$ cd node-js-es6
 $ npm node-dev -g
 $ npm install
 $ node-dev server.js

@@ -11,15 +11,14 @@ router.use(function (req, res, next) {
     res.writeHead(200, {'Content-Type': 'image/x-icon'} )
     res.end(/* icon content here */)
   } else {
-    var url = req.protocol + '://' + req.get('host') + req.originalUrl;
-    console.log(`Path: ${req.url}`)
-    console.log(`URL: ${url}`)
+    var url = req.protocol + '://' + req.get('host');
+    console.log(`URL: ${url}(${req.url})`)
     next()
   }
 })
 
 router.get('/', function (req, res, next) {
-  console.log('This is a mainpage')
+  console.log('This is a middleware then get homepage')
   next()
 })
 

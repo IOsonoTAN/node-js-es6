@@ -1,0 +1,30 @@
+border-radius()
+  -webkit-border-radius arguments !important
+  -moz-border-radius arguments !important
+  border-radius arguments !important
+
+for i in (0px 5px 10px 15px 20px)
+  .margin-top-{i}
+    margin-top i !important
+  .margin-right-{i}
+    margin-right i !important
+  .margin-left-{i}
+    margin-left i !important
+  .margin-bottom-{i}
+    margin-bottom i !important
+  .padding-top-{i}
+    padding-top i !important
+  .padding-right-{i}
+    padding-right i !important
+  .padding-left-{i}
+    padding-left i !important
+  .padding-bottom-{i}
+    padding-bottom i !important
+
+for i in (0px..10px)
+  .border-radius-{i}
+    border-radius(i)
+
+body
+  font-size 15px
+  background #EEE
