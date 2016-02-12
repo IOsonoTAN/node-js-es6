@@ -3,13 +3,13 @@
 const colors = require('colors/safe')
 let config = require('../config/app')
 
-var redis = require('redis')
-var redis_url = require('url').parse(config.redis.url)
-var redis_password = redis_url.auth.split(':')[1]
+let redis = require('redis')
+let redis_url = require('url').parse(config.redis.url)
+let redis_password = redis_url.auth.split(':')[1]
 redis = redis.createClient(redis_url.port, redis_url.hostname)
 redis.select(config.redis.channel)
 redis.on('error', function(error) {
-  var RedisStore;
+  let RedisStore;
   if (error) {
     console.log(colors.red(error));
   } else {

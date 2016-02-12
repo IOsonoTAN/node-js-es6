@@ -8,7 +8,6 @@ const http = require('http'),
       path = require('path'),
       express = require('express'),
       app = express(),
-      xmlParser = require('express-xml-bodyparser'),
       bodyParser = require('body-parser'),
       useragent = require('express-useragent'),
       colors = require('colors/safe'),
@@ -34,11 +33,11 @@ app.disable('x-powered-by')
 
 /**
  * app.engine: using handlebars to be template engine
+ * -- 'helpers': require('./config/handlebars-helpers')
  */
 var hbs = require('express-handlebars').create({
   'defaultLayout': 'master',
   'extname'      : '.hbs',
-  // 'helpers'      : require('./config/handlebars-helpers'),
   'layoutsDir'   : __dirname + '/apps/views/layout',
   'partialsDir'  : __dirname + '/apps/views/partials'
 })
@@ -63,7 +62,6 @@ let compile = function(str, path) {
 }
 
 app.use(
-  // xmlParser(),
   useragent.express(),
   stylus.middleware({
     src: __dirname + '/apps/resources/css',
@@ -71,8 +69,8 @@ app.use(
     compile: compile,
   }),
   express.static(__dirname + '/public'),
-  bodyParser.urlencoded({ 'extended': true }),
   bodyParser.json({ 'type': 'application/json' }),
+  bodyParser.urlencoded({ 'extended': true }),
   middlewares,
   routes
 )
