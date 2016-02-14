@@ -12,7 +12,7 @@ router.use(function (req, res, next) {
     res.end(/* icon content here */)
   } else {
     var url = req.protocol + '://' + req.get('host');
-    console.log(`URL: ${url}(${req.url})`)
+    console.log(`[${req.method}] ${url}(${req.url})`)
     next()
   }
 })

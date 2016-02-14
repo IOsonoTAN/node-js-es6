@@ -27,7 +27,7 @@ app.locals = {
 }
 
 /**
- * app.disable: disable a something
+ * app.disable: disable something
  */
 app.disable('x-powered-by')
 
@@ -55,7 +55,7 @@ app.set('port', process.env.PORT ? process.env.PORT : config.host.port)
  * app.use: set modules to using in express.js
  */
 let compile = function(str, path) {
-  console.log('stylus is compiling')
+  console.log('stylus compiled')
   return stylus(str)
          .set('filename', path)
          .use(nib())
@@ -64,11 +64,11 @@ let compile = function(str, path) {
 app.use(
   useragent.express(),
   stylus.middleware({
-    src: __dirname + '/apps/resources/css',
-    dest: __dirname + '/public/css',
+    src: './apps/resources/css',
+    dest: './public/css',
     compile: compile,
   }),
-  express.static(__dirname + '/public'),
+  express.static('./public'),
   bodyParser.json({ 'type': 'application/json' }),
   bodyParser.urlencoded({ 'extended': true }),
   middlewares,
@@ -76,5 +76,5 @@ app.use(
 )
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log(colors.green(`application is start: ${config.host.self}`))
+  console.log(colors.green(`application is started: ${config.host.self}`))
 })
