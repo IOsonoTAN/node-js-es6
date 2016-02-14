@@ -1,7 +1,7 @@
 'use strict'
 
 let mongoose = require('mongoose')
-let Schema = mongoose.Schema
+import { Schema } from 'mongoose'
 
 let userSchema = new Schema({
   username: {
