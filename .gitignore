@@ -2,7 +2,8 @@
 node_modules
 node_modules/*
 log
-upload
+public/uploads
+public/uploads/*
 tmp/*
 *.sublime*
 public/min/*
