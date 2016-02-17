@@ -14,11 +14,17 @@ Libraries integrated:
 Recommended:
 - Node.js 4 or higher
 
+Preparing:
+- Start MongoDB
+- Start Redis
+
 ### Installation
 
 ```sh
-$ git clone https://github.com/IOsonoTAN/node-js-es6; cd node-js-es6;
-$ npm install; npm node-dev -g;
+$ git clone https://github.com/IOsonoTAN/node-js-es6
+$ cd node-js-es6
+$ npm install
+$ npm node-dev -g
 $ node-dev server.js
 ```
 
