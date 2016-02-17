@@ -1,7 +1,7 @@
 'use strict'
 
 const colors = require('colors/safe')
-let config = require('../config/app')
+const config = require('../config/app')
 
 let redis = require('redis')
 let redis_url = require('url').parse(config.redis.url)

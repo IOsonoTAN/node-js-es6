@@ -4,7 +4,7 @@ require('rootpath')()
 
 let redis = require('config/redis')
 let mongo = require('config/mongo')
-let User = require('apps/models/user')
+let User  = require('apps/models/user')
 
 exports.getMainpage = (req, res) => {
 
@@ -35,11 +35,11 @@ exports.postMainpage = (req, res) => {
 exports.getUser = (req, res) => {
 
   let user_id = req.params.user_id
-  let users = User.getById(user_id, function(users, error){
+  let user = User.getById(user_id, function(user, error){
     if(error) {
       res.status(500).json(error)
     } else {
-      res.status(200).json(users)
+      res.status(200).json(user)
     }
   })
 
@@ -47,7 +47,7 @@ exports.getUser = (req, res) => {
 
 exports.getUserList = (req, res) => {
 
-  let users = User.find({}, function(users, error){
+  let users = User.find({}, function(error, users){
     if(error) {
       res.status(500).json(error)
     } else {

@@ -14,6 +14,10 @@ const http = require('http'),
       stylus = require('stylus'),
       nib = require('nib'),
       moment = require('moment'),
+      
+      /**
+       * local requiring modules
+       */
       config = require('./config/app'),
       middlewares = require('./apps/middlewares/router'),
       helpers = require('./apps/helpers'),
@@ -38,15 +42,15 @@ app.disable('x-powered-by')
 var hbs = require('express-handlebars').create({
   'defaultLayout': 'master',
   'extname'      : '.hbs',
-  'layoutsDir'   : __dirname + '/apps/views/layout',
-  'partialsDir'  : __dirname + '/apps/views/partials'
+  'layoutsDir'   : './apps/views/layout',
+  'partialsDir'  : './apps/views/partials'
 })
 app.engine('.hbs', hbs.engine);
 
 /**
  * app.set: set config for using express.js
  */
-app.set('views', path.join(__dirname, 'apps/views'))
+app.set('views', './apps/views')
 app.set('view engine', '.hbs')
 app.set('trust proxy', true)
 app.set('port', process.env.PORT ? process.env.PORT : config.host.port)
@@ -78,3 +82,5 @@ app.use(
 http.createServer(app).listen(app.get('port'), function(){
   console.log(colors.green(`application is started: ${config.host.self}`))
 })
+
+module.exports = app
