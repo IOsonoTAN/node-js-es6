@@ -14,8 +14,6 @@ mongoose.connection.on('error', function(error) {
 /**
  * Load database schemas
  */
-let Schema = mongoose.Schema
-
 let models = fs.readdirSync('./apps/models/')
 models.forEach(function (file) {
   if(file.search(/\.js/) > -1){
