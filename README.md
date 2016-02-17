@@ -3,13 +3,13 @@
 This application for a beginner need to learn about node.js and es6.
 
 Libraries integrated:
-- Express.js 4.x
 - ECMAScript 2015 (ES6)
-- Redis DB
+- Express.js 4
+- Redis
 - MongoDB by Mongoose
 - Handlebars template engine
 - Stylus css engine
-- Mocha & Chai unit testing
+- Mocha unit testing
 
 Recommended:
 - Node.js 4 or higher
@@ -17,9 +17,10 @@ Recommended:
 ### Installation
 
 ```sh
-$ git clone https://github.com/IOsonoTAN/node-js-es6
-$ cd node-js-es6
-$ npm node-dev -g
-$ npm install
+$ git clone https://github.com/IOsonoTAN/node-js-es6; cd node-js-es6;
+$ npm install; npm node-dev -g;
 $ node-dev server.js
 ```
+
+### Support or Contact
+If you have any problems, Contact to me: im@tzv.me (Krissada Boontrigratn)
