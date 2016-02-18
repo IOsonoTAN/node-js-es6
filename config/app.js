@@ -20,7 +20,11 @@ config = {
       'url': process.env.REDISTOGO_URL || process.env.REDIS_URL || 'redis://:@localhost:6379',
       'channel': 3
     },
-    'mongodb': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost:27017/nodejs'
+    'mongodb': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost:27017/nodejs',
+    'googleAuth' : {
+      'clientID': '599654107739.apps.googleusercontent.com',
+      'clientSecret': 'AgWn906CtjuIZehL1aQuUE-t'
+    }
   },
   'development': {
     'session_secret': 'app-dev',
@@ -33,7 +37,11 @@ config = {
       'url': process.env.REDISTOGO_URL || process.env.REDIS_URL || 'redis://:@localhost:6379',
       'channel': 3
     },
-    'mongodb': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost:27017/nodejs'
+    'mongodb': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost:27017/nodejs',
+    'googleAuth' : {
+      'clientID': '599654107739.apps.googleusercontent.com',
+      'clientSecret': 'AgWn906CtjuIZehL1aQuUE-t'
+    }
   }
 }
 module.exports = Object.assign(config['default'], config[env])

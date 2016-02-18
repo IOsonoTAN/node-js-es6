@@ -7,13 +7,16 @@ const http = require('http'),
       fs = require('fs'),
       path = require('path'),
       express = require('express'),
+      session = require('express-session'),
       app = express(),
       bodyParser = require('body-parser'),
+      cookieParser = require('cookie-parser'),
       useragent = require('express-useragent'),
       colors = require('colors/safe'),
       stylus = require('stylus'),
       nib = require('nib'),
       moment = require('moment'),
+      passport = require('passport'),
       
       /**
        * local requiring modules
@@ -73,11 +76,30 @@ app.use(
     compile: compile,
   }),
   express.static('./public'),
+  cookieParser(),
   bodyParser.json({ 'type': 'application/json' }),
   bodyParser.urlencoded({ 'extended': true }),
+  session({
+    // genid: function(req) {
+    //   return genuuid() // use UUIDs for session IDs
+    // },
+    secret: 'p@y$3uY',
+    name: 'Paysbuy',
+    resave: true,
+    saveUninitialized: true,
+    cookie: {
+      maxAge: 60000
+    }
+  }),
+  passport.initialize(),
+  passport.session(),
   middlewares,
   routes
 )
+app.use((req, res, next) => {
+  res.locals.session = req.session
+  return next()
+})
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log(colors.green(`application is started: ${config.host.self}`))
