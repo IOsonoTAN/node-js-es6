@@ -83,8 +83,8 @@ app.use(
     // genid: function(req) {
     //   return genuuid() // use UUIDs for session IDs
     // },
-    secret: 'p@y$3uY',
-    name: 'Paysbuy',
+    secret: 'n0d3.j$',
+    name: 'Node.JS ES6',
     resave: true,
     saveUninitialized: true,
     cookie: {

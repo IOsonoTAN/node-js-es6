@@ -9,10 +9,6 @@ passport.use(new googleStrategy({
   clientSecret: config.googleAuth.clientSecret,
   callbackURL: `${config.host.self}/auth/google/callback`
 }, function(token, refreshToken, profile, done) {
-  // console.log('google token ->', token)
-  // console.log('google refreshToken ->', refreshToken)
-  // console.log('google profile ->', profile)
-  // console.log('google domain ->', profile._json.domain)
   done('', profile)
 }))
 

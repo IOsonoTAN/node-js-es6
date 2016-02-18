@@ -10,6 +10,7 @@ Libraries integrated:
 - Handlebars template engine
 - Stylus css engine
 - Mocha unit testing
+- Login Google with Passport.js
 
 Recommended:
 - Node.js 4 or higher
