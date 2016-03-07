@@ -21,6 +21,8 @@ router.route('/user/:user_id').get(pageController.getUser)
 router.route('/profile').get(authController.getProfile)
 router.route('/auth/google').get(passport.authenticate('google', { scope: ['profile', 'email', 'openid'] }))
 router.route('/auth/google/callback').get(passport.authenticate('google', { successRedirect: '/profile', failureRedirect: '/auth/failure' }))
+router.route('/auth/facebook').get(passport.authenticate('facebook'))
+router.route('/auth/facebook/callback').get(passport.authenticate('facebook', { successRedirect: '/profile', failureRedirect: '/auth/failure' }))
 
 /**
  * 404 page notfound.

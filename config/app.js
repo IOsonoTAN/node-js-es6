@@ -24,6 +24,10 @@ config = {
     'googleAuth' : {
       'clientID': '599654107739.apps.googleusercontent.com',
       'clientSecret': 'AgWn906CtjuIZehL1aQuUE-t'
+    },
+    'facebookAuth' : {
+      'clientID': '148570992008274',
+      'clientSecret': '9c319e0f5ad9db6bd7e386fba5a3e089'
     }
   },
   'development': {
@@ -41,6 +45,10 @@ config = {
     'googleAuth' : {
       'clientID': '599654107739.apps.googleusercontent.com',
       'clientSecret': 'AgWn906CtjuIZehL1aQuUE-t'
+    },
+    'facebookAuth' : {
+      'clientID': '148570992008274',
+      'clientSecret': '9c319e0f5ad9db6bd7e386fba5a3e089'
     }
   }
 }
